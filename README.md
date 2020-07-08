@@ -11,6 +11,7 @@ A simple blog app by Node.js with Google Authentication.
 ## Version
 
 Current app version is on 0.1.0
+
 Production level still active, and app under development.
 
 ## Installation
@@ -20,4 +21,5 @@ Instructions will follow.
 ## Licensed under [MIT](https://raw.githubusercontent.com/hasimy-as/TalkAway/master/LICENSE)
 
 Happy coding!
+
 ~Hasimy
