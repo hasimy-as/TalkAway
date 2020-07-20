@@ -3,8 +3,11 @@ const router = express.Router();
 
 /** @desc Landing page 
  *  @route GET /
-*/
+*/  router.get('/', (req, res) => res.render('login'));
 
-router.get('/', (req, res) => res.end('<h1>Hello from server-side</h1>'));
+
+/** @desc Dashboard page 
+ *  @route GET /dashboard
+*/  router.get('/dashboard', (req, res) => res.render('dashboard'))
 
 module.exports = router;
