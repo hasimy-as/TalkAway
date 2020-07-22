@@ -1,5 +1,5 @@
-var mongoose = require('mongoose');
-var UserSchema = new mongoose.Schema({
+const mongoose = require('mongoose');
+const UserSchema = new mongoose.Schema({
     googleId: {
         type: String,
         required : true
@@ -17,13 +17,13 @@ var UserSchema = new mongoose.Schema({
         required : true
     },
     image: {
-        type: String,
-        reqiured: true
+        type: String
     },
     createdAt:{
         type: Date,
         default:Date.now
     }
 });
-var User = mongoose.model('user', UserSchema);
+
+const User = mongoose.model('user', UserSchema);
 module.exports = User;
