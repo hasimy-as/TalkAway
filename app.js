@@ -59,15 +59,32 @@ app.use(function (req, res, next) {
   next();
 });
 
+// Helpers
+const {
+  formatDate,
+  stripTags,
+  truncate,
+  editIcon,
+  select,
+} = require('./helpers/hbs');
+
 // Route
 app.use('/', require('./route/index'));
 app.use('/auth', require('./route/auth'));
+app.use('/stories', require('./route/stories'));
 
 // Handlebars
 app.engine('.hbs',
 	hbs({
 		defaultLayout: 'main',
-		extname: '.hbs',
+    extname: '.hbs',
+    helpers: {
+      formatDate,
+      stripTags,
+      truncate,
+      editIcon,
+      select,
+    },
 	}),
 ).set('view engine', '.hbs');
 
