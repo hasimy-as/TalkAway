@@ -10,9 +10,9 @@ A simple blog app by Node.js with Google Authentication.
 
 ## Version
 
-Current app version is on v0.
+Current app version is on v1.0
 
-Production level still active, and app under development.
+Production level inactive.
 
 ## Installation
 
