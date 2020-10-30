@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+</head>
+
+<body>
+    {{> _add_btn}}
+    {{> _header}}
+    <div class="container">
+        <h2 style="text-align: center; margin-top: 30px">Stories</h2>
+        <div class="row">
+            {{#if stories}}
+            <h6 style="text-align: center; margin-bottom: 30px;">Here are the stories</h6>
+            {{#each stories}}
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        {{{editIcon user ../user _id}}}
+                    </div>
+                    <div class="card-content center-align">
+                        <h5>{{title}}</h5>
+                        <p>{{stripTags (truncate body 150)}}</p>
+                        <br>
+                        <div class="chip">
+                            <img src="{{user.image}}" alt="">
+                            <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                        </div>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="/stories/{{_id}}" class="btn grey">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <p style="text-align: center; color: red;">No stories to display</p>
+            {{/if}}
+        </div>
+    </div>
+</body>
+
+</html>

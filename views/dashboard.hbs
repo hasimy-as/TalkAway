@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {{> _add_btn}}
+    {{> _header}}
+    <div class="container">
+        <center>
+            <h3 style="margin-top: 30px;">Welcome, {{name}}!</h3>
+        </center>
+
+        {{#if stories}}
+        <h6 style="text-align: center; color: green; margin-bottom: 40px">Here are your stories:</h6>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each stories}}
+                <tr>
+                    <td><a href="/stories/{{_id}}">{{title}}</a></td>
+                    <td>{{ createdAt }}</td>
+                    <td><span class="dash-status">{{status}}</span></td>
+                    <td>
+                        <a href="/stories/edit/{{_id}}" class="btn btn-float">
+                            <i class="fas fa-edit"></i>
+                        </a>
+
+                        <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                            {{!-- <input type="hidden" name="_method" value="DELETE"> buat nanti kalo udah tambah rute khusus cerita --}}
+                            <button type="submit" class="btn red">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        <center>
+            <p style="color: red;">You have not created any stories.</p>
+        </center>
+        {{/if}}
+    </div>
+</body>
+
+</html>
