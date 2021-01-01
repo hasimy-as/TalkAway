@@ -24,9 +24,6 @@ npm run dev
 # Run in production
 npm start
 
-# Initialize mongodb
-mongod
-
 ```
 
 ## Endpoints
