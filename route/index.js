@@ -5,23 +5,34 @@ const { ensureAuth, ensureGuest } = require('../middleware/auth');
 
 const Story = require('../model/story');
 
-/** @desc Landing page 
- *  @route GET /
-*/  router.get('/', ensureGuest, (req, res) => res.render('login'));
+/**
+ * @description
+ * Landing Page
+ *
+ * @route
+ * GET /
+ */
 
+router.get('/', ensureGuest, (req, res) => res.render('login'));
 
-/** @desc Dashboard page 
- *  @route GET /dashboard
-*/  router.get('/dashboard', ensureAuth, async (req, res) => {
-  try {
-    const stories = await Story.find({ user: req.user.id }).lean();
-    res.render('dashboard', {
-      name: req.user.firstName,
-      stories
-    }); 
-  } catch (e) {
-    console.error(e);
-  }
+/**
+ * @description
+ * Dashboard
+ *
+ * @route
+ * GET /dashboard
+ */
+
+router.get('/dashboard', ensureAuth, async (req, res) => {
+	try {
+		const stories = await Story.find({ user: req.user.id }).lean();
+		res.render('dashboard', {
+			name: req.user.firstName,
+			stories,
+		});
+	} catch (err) {
+		console.error(err);
+	}
 });
 
 module.exports = router;

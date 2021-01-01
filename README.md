@@ -1,6 +1,7 @@
 # TalkAway
 A simple blog app by Node.js with Google Authentication.
 
+
 ## Project Status
 
 [![Github license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/hasimy-as/TalkAway/master/LICENSE)
@@ -10,13 +11,43 @@ A simple blog app by Node.js with Google Authentication.
 
 ## Version
 
-Current app version is on v1.0
+Current app version is on v1.1
 
-Production level inactive.
 
-## Installation
+## Usage
 
-Instructions will follow.
+```
+# Install dependencies
+npm install
+
+# Run in development
+npm run dev
+
+# Run in production
+npm start
+```
+
+
+## Endpoints
+
+```
+# Routes
+ROOT                       {{url}}/
+DASHBOARD                  {{url}}/dashboard
+GOOGLE AUTHENTICATION      {{url}}/auth/google
+CALLBACK                   {{url}}/auth/google/callback
+LOGOUT                     {{url}}/auth/logout
+CREATE STORY               {{url}}/stories/add
+GET STORIES                {{url}}/stories
+```
+
+
+## Documentation
+
+To setup MongoDB cluster and Google OAUTH, refer to the following documentation.
+
+<a href="docs/Talkaway Documentation.pdf">Talkaway Documentation.pdf</a>
+
 
 ## Licensed under [MIT](https://raw.githubusercontent.com/hasimy-as/TalkAway/master/LICENSE)
 

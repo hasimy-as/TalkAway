@@ -27,8 +27,10 @@ module.exports = (passport) => {
 						user = await User.create(newUser);
 						done(null, user);
 					}
-				} catch (e) {
-					if (e) throw new Error(e);
+				} catch (err) {
+					if (err) {
+						throw new Error(e);
+					}
 				}
 			},
 		),
