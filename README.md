@@ -10,13 +10,42 @@ A simple blog app by Node.js with Google Authentication.
 
 ## Version
 
-Current app version is on v0.
+Current app version is on v1.1.
 
-Production level still active, and app under development.
+## Usage
 
-## Installation
+```
+# Install dependencies
+npm install
 
-Instructions will follow.
+# Run in development
+npm run dev
+
+# Run in production
+npm start
+
+# Initialize mongodb
+mongod
+
+```
+
+## Endpoints
+
+```
+# Routes
+ROOT                       {{url}}/
+DASHBOARD                  {{url}}/dashboard
+GOOGLE AUTHENTICATION      {{url}}/auth/google
+CALLBACK                   {{url}}/auth/google/callback
+LOGOUT                     {{url}}/auth/logout
+CREATE STORY               {{url}}/stories/add
+GET STORIES                {{url}}/stories
+
+```
+
+## Documentation
+
+<a href="docs/Talkaway Documentation.pdf">Talkaway Documentation.pdf</a>
 
 ## Licensed under [MIT](https://raw.githubusercontent.com/hasimy-as/TalkAway/master/LICENSE)
 
