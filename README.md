@@ -45,6 +45,8 @@ GET STORIES                {{url}}/stories
 
 ## Documentation
 
+To setup MongoDB cluster and Google OAUTH, refer to the following documentation.
+
 <a href="docs/Talkaway Documentation.pdf">Talkaway Documentation.pdf</a>
 
 ## Licensed under [MIT](https://raw.githubusercontent.com/hasimy-as/TalkAway/master/LICENSE)
